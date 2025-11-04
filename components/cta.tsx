@@ -29,10 +29,14 @@ export function CTA() {
                 ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Pronto para transformar seu negócio com IA?
+              Pronto para{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                transformar
+              </span>{" "}
+              seu negócio com IA?
             </h2>
             <p
-              className={`text-lg text-muted-foreground leading-relaxed transition-all duration-700 delay-200 ${
+              className={`text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-200 ${
                 ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >

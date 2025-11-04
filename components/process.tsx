@@ -41,8 +41,13 @@ export function Process() {
             titleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance mb-4">Como Funciona</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance mb-4">
+            Como{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              Funciona
+            </span>
+          </h2>
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
             Processo simples e transparente do diagnóstico à implementação
           </p>
         </div>
@@ -52,7 +57,7 @@ export function Process() {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`group relative flex gap-6 rounded-xl bg-white/80 dark:bg-zinc-900/60 backdrop-blur-sm p-6 transition-all duration-700 ${
+                className={`group relative flex gap-6 rounded-xl bg-zinc-50/95 dark:bg-zinc-900/60 backdrop-blur-sm p-6 border border-zinc-200/50 dark:border-zinc-800/50 transition-all duration-700 ${
                   stepsInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
@@ -68,7 +73,7 @@ export function Process() {
                     {step.title}
                     <CheckCircle2 className="h-5 w-5 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                  <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             ))}

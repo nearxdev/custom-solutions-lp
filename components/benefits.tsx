@@ -41,9 +41,13 @@ export function Benefits() {
           }`}
         >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance mb-4">
-            Engenharia do futuro de soluções digitais
+            Engenharia do{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              futuro
+            </span>{" "}
+            de soluções digitais
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
             Fundimos IA, blockchain e dados para criar produtos escaláveis e inteligentes que levam indústrias ao
             próximo nível.
           </p>
@@ -55,7 +59,7 @@ export function Benefits() {
             return (
               <Card
                 key={index}
-                className={`group relative overflow-hidden border-2 bg-white/80 border-gray-200 dark:border-primary/60 dark:bg-black/40 backdrop-blur-sm p-8 transition-all duration-700 ${
+                className={`group relative overflow-hidden border-2 bg-zinc-50/95 border-zinc-200 dark:border-primary/60 dark:bg-black/40 backdrop-blur-sm p-8 transition-all duration-700 ${
                   cardsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
@@ -66,7 +70,7 @@ export function Benefits() {
                   </div>
                 </div>
                 <h3 className="mb-3 text-2xl font-bold">{benefit.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">{benefit.description}</p>
               </Card>
             )
           })}

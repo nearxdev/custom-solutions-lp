@@ -67,9 +67,14 @@ export function Testimonials() {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">Prova Social</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-pretty">
-            Veja o que líderes de empresas que transformaram seus negócios têm a dizer
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">
+            Resultados{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              Comprovados
+            </span>
+          </h2>
+          <p className="text-zinc-600 dark:text-zinc-400 text-lg max-w-2xl mx-auto text-pretty">
+            Impacto real e mensurável no seu negócio desde o primeiro mês
           </p>
         </div>
 
@@ -88,7 +93,7 @@ export function Testimonials() {
                 <Quote className="w-8 h-8 text-primary/60 mb-4" />
 
                 {/* Quote Text */}
-                <p className="text-muted-foreground mb-6 flex-grow text-pretty leading-relaxed">
+                <p className="text-zinc-600 dark:text-zinc-400 mb-6 flex-grow text-pretty leading-relaxed">
                   "{testimonial.quote}"
                 </p>
 
@@ -103,7 +108,7 @@ export function Testimonials() {
                   <div>
                     <p className="font-semibold text-foreground">{testimonial.author}</p>
                     <p className="text-sm text-primary/80">{testimonial.role}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-500">{testimonial.company}</p>
                   </div>
                 </div>
               </div>

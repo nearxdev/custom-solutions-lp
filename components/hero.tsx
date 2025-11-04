@@ -119,13 +119,17 @@ export function Hero() {
               >
                 <div className="text-sm font-medium text-primary tracking-wider uppercase">AI Consulting</div>
                 <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-                  Parceiro estratégico em tecnologia para sua empresa
+                  Parceiro estratégico em{" "}
+                  <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                    tecnologia
+                  </span>{" "}
+                  para sua empresa
                 </h1>
               </div>
 
               <p
                 ref={descRef as any}
-                className={`mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed transition-all duration-700 delay-100 ${
+                className={`mx-auto max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-100 ${
                   descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >

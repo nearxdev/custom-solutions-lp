@@ -21,7 +21,7 @@ export function Footer() {
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent" />
               <span className="text-xl font-bold">AI Consulting</span>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
               Transformando negócios com inteligência artificial e tecnologia de ponta.
             </p>
           </div>
@@ -32,7 +32,7 @@ export function Footer() {
             }`}
           >
             <h3 className="font-semibold mb-4">Serviços</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
               <li>
                 <a href="#servicos" className="hover:text-foreground transition-colors">
                   Análise de Processos
@@ -57,7 +57,7 @@ export function Footer() {
             }`}
           >
             <h3 className="font-semibold mb-4">Empresa</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
               <li>
                 <a href="#beneficios" className="hover:text-foreground transition-colors">
                   Benefícios
@@ -87,7 +87,7 @@ export function Footer() {
             }`}
           >
             <h3 className="font-semibold mb-4">Contato</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
+            <ul className="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
               <li className="flex items-center gap-2">
                 <MessageCircle className="h-4 w-4 text-primary" />
                 <a
@@ -112,7 +112,7 @@ export function Footer() {
         </div>
 
         <div
-          className={`mt-12 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground transition-all duration-700 delay-400 ${
+          className={`mt-12 pt-8 border-t border-border/40 text-center text-sm text-zinc-600 dark:text-zinc-400 transition-all duration-700 delay-400 ${
             footerInView ? "opacity-100" : "opacity-0"
           }`}
         >

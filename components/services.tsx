@@ -37,9 +37,13 @@ export function Services() {
           }`}
         >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance mb-6">
-            Mais que software. Transformação digital completa.
+            Mais que software.{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              Transformação digital
+            </span>{" "}
+            completa.
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
             Nossos squads combinam inteligência artificial, blockchain e desenvolvimento avançado para criar soluções
             sob medida. Operamos como seu time de tecnologia integrado, do conceito à execução.
           </p>
@@ -51,7 +55,7 @@ export function Services() {
             return (
               <Card
                 key={index}
-                className={`group relative overflow-hidden border-2 bg-white/80 border-gray-200 dark:border-primary/60 dark:bg-zinc-900/60 backdrop-blur-sm p-8 transition-all duration-700 ${
+                className={`group relative overflow-hidden border-2 bg-zinc-50/95 border-zinc-200 dark:border-primary/60 dark:bg-zinc-900/60 backdrop-blur-sm p-8 transition-all duration-700 ${
                   cardsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
@@ -63,7 +67,7 @@ export function Services() {
                 </div>
 
                 <h3 className="mb-3 text-xl font-bold">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">{service.description}</p>
               </Card>
             )
           })}
@@ -78,7 +82,7 @@ export function Services() {
               }`}
               style={{ transitionDelay: `${600 + i * 100}ms` }}
             >
-              <div className="h-20 w-20 rounded-full border-2 bg-white/80 border-gray-200 dark:border-primary/60 dark:bg-zinc-900/60 backdrop-blur-sm flex items-center justify-center text-muted-foreground transition-all duration-300">
+              <div className="h-20 w-20 rounded-full border-2 bg-zinc-50/95 border-zinc-200 dark:border-primary/60 dark:bg-zinc-900/60 backdrop-blur-sm flex items-center justify-center text-zinc-600 dark:text-zinc-400 transition-all duration-300">
                 <Icon className="h-8 w-8" />
               </div>
             </div>
