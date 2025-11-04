@@ -83,7 +83,7 @@ export function Testimonials() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="h-full bg-white/80 dark:bg-zinc-900/60 backdrop-blur-sm rounded-lg p-6 flex flex-col">
+              <div className="h-full bg-zinc-50/95 dark:bg-zinc-900/60 backdrop-blur-sm rounded-lg p-6 flex flex-col border border-zinc-200/50 dark:border-zinc-800/50">
                 {/* Quote Icon */}
                 <Quote className="w-8 h-8 text-primary/60 mb-4" />
 

@@ -3,78 +3,99 @@
 import { Button } from "@/components/ui/button"
 import { GridPattern } from "@/components/grid-pattern"
 import { useInView } from "@/hooks/use-in-view"
+import { useTheme } from "next-themes"
 import Image from "next/image"
+import { useEffect, useState } from "react"
 
 export function Hero() {
   const whatsappUrl = "https://wa.me/5521999871904?text=Olá!%20Quero%20transformar%20meu%20negócio%20com%20IA"
+  const { theme, resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
 
   const { ref: titleRef, isInView: titleInView } = useInView({ threshold: 0.3 })
   const { ref: descRef, isInView: descInView } = useInView({ threshold: 0.3 })
   const { ref: buttonsRef, isInView: buttonsInView } = useInView({ threshold: 0.3 })
   const { ref: logosRef, isInView: logosInView } = useInView({ threshold: 0.2 })
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const companyLogos = [
     {
-      name: "Polygon",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Polygon_Primary_Light-swCbd7zU3Q7u7mjIr75aNgzQE6gXCF.png",
-      width: 140,
-      height: 40,
-    },
-    {
-      name: "Solana",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/solanaLogo%20white-KNOeLKMhQU3awoKexuvfiKZPY3gVmE.png",
-      width: 140,
-      height: 40,
-    },
-    {
-      name: "OpenAI",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1681142235openai-logo-png%20white-NIebbj2saYLnYwX4nFUZbv3GQqAEMJ.png",
+      name: "OP Core",
+      darkUrl: "/logos/OP-Core_Wdmk_white-RGB_v01.png",
+      lightUrl: "/logos/OP-Core_Symb_1C-Red-RGB_v01.png",
       width: 120,
       height: 40,
     },
     {
+      name: "Arbitrum",
+      darkUrl: "/logos/0923_Arbitrum_Logos_AllWhite_horizontal_RGB.png",
+      lightUrl: "/logos/1223_Arbitrum_Logos_Primary_horizontal_RGB.png",
+      width: 140,
+      height: 40,
+    },
+    {
       name: "Bradesco",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Bradesco_H_White_RGB-ZsyEYsEJA5SjEGgVwtR99pWmq8Vf7b.png",
+      darkUrl: "/logos/Bradesco_H_White_RGB.png",
+      lightUrl: "/logos/Bradesco_H_Red_RGB.png",
       width: 140,
       height: 40,
     },
     {
       name: "Animoca Brands",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Animca%20Brands%20white-zagCY3AeNHUIIFra4HJYmuSambnnHl.png",
+      darkUrl: "/logos/Animca Brands white.png",
+      lightUrl: "/logos/Animca Brands RGB.png",
       width: 140,
       height: 40,
     },
     {
-      name: "Arbitrum",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/0923_Arbitrum_Logos_AllWhite_horizontal_RGB-CTLQRxcMqtSqYtifErQ8JkemKFk4fg.png",
-      width: 140,
-      height: 40,
-    },
-    {
-      name: "Stellar",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stellar%20Logo%20Final%20white-1fi4WJQd9a466tGC6qviVDqzjtszMq.png",
+      name: "OpenAI",
+      darkUrl: "/logos/1681142235openai-logo-png white.png",
+      lightUrl: "/logos/1681142235openai-logo-png.png",
       width: 120,
+      height: 40,
+    },
+    {
+      name: "Polygon",
+      darkUrl: "/logos/Polygon_Primary_Light.png",
+      lightUrl: "/logos/Polygon_Primary_Dark.png",
+      width: 140,
       height: 40,
     },
     {
       name: "Internet Computer",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IC_logo_horizontal_white-FZx8Usfj5CcuPkJwTTBp1oYEFTX38K.png",
+      darkUrl: "/logos/IC_logo_horizontal_white.png",
+      lightUrl: "/logos/IC_logo_horizontal_black.png",
       width: 140,
       height: 40,
     },
     {
-      name: "OP Core",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OP-Core_Wdmk_white-RGB_v01-YVNajiVFAC7mwFLeEuGoIfN7e3SCdj.png",
-      width: 120,
+      name: "Solana",
+      darkUrl: "/logos/solanaLogo white.png",
+      lightUrl: "/logos/solanaLogo black.png",
+      width: 140,
       height: 40,
     },
     {
-      name: "SN",
-      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SN-Stacked-Flat%20white-niNSzH6T5v3bkEG2mKgY43H1pPESUO.png",
+      name: "Starknet",
+      darkUrl: "/logos/SN-Stacked-Flat white.png",
+      lightUrl: "/logos/SN-Stacked-Flat colour.png",
       width: 100,
       height: 40,
     },
+    {
+      name: "Stellar",
+      darkUrl: "/logos/Stellar Logo Final white.png",
+      lightUrl: "/logos/Stellar Logo Final black.png",
+      width: 120,
+      height: 40,
+    },
   ]
+
+  const currentTheme = mounted ? (resolvedTheme || theme) : "dark"
+  const isLightMode = currentTheme === "light"
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
@@ -149,7 +170,7 @@ export function Hero() {
                     style={{ width: logo.width }}
                   >
                     <Image
-                      src={logo.url || "/placeholder.svg"}
+                      src={isLightMode ? logo.lightUrl : logo.darkUrl}
                       alt={`${logo.name} logo`}
                       width={logo.width}
                       height={logo.height}
@@ -165,7 +186,7 @@ export function Hero() {
                     style={{ width: logo.width }}
                   >
                     <Image
-                      src={logo.url || "/placeholder.svg"}
+                      src={isLightMode ? logo.lightUrl : logo.darkUrl}
                       alt={`${logo.name} logo`}
                       width={logo.width}
                       height={logo.height}
