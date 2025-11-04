@@ -162,7 +162,9 @@ export function Hero() {
               logosInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">Empresas que escalaram conosco</p>
+            <p className="text-base md:text-lg font-semibold tracking-wide text-zinc-700 dark:text-zinc-300 uppercase">
+              Empresas que escalaram conosco
+            </p>
 
             <div className="relative overflow-hidden py-6">
               {/* Gradient overlays for fade effect */}
