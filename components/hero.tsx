@@ -27,70 +27,70 @@ export function Hero() {
       darkUrl: "/logos/OP-Core_Wdmk_white-RGB_v01.png",
       lightUrl: "/logos/OP-Core_Symb_1C-Red-RGB_v01.png",
       width: 120,
-      height: 40,
+      height: 48,
     },
     {
       name: "Arbitrum",
       darkUrl: "/logos/0923_Arbitrum_Logos_AllWhite_horizontal_RGB.png",
       lightUrl: "/logos/1223_Arbitrum_Logos_Primary_horizontal_RGB.png",
       width: 140,
-      height: 40,
+      height: 48,
     },
     {
       name: "Bradesco",
       darkUrl: "/logos/Bradesco_H_White_RGB.png",
       lightUrl: "/logos/Bradesco_H_Red_RGB.png",
       width: 140,
-      height: 40,
+      height: 48,
     },
     {
       name: "Animoca Brands",
       darkUrl: "/logos/Animca Brands white.png",
       lightUrl: "/logos/Animca Brands RGB.png",
       width: 140,
-      height: 40,
+      height: 48,
     },
     {
       name: "OpenAI",
       darkUrl: "/logos/1681142235openai-logo-png white.png",
       lightUrl: "/logos/1681142235openai-logo-png.png",
       width: 120,
-      height: 40,
+      height: 48,
     },
     {
       name: "Polygon",
       darkUrl: "/logos/Polygon_Primary_Light.png",
       lightUrl: "/logos/Polygon_Primary_Dark.png",
       width: 140,
-      height: 40,
+      height: 48,
     },
     {
       name: "Internet Computer",
       darkUrl: "/logos/IC_logo_horizontal_white.png",
       lightUrl: "/logos/IC_logo_horizontal_black.png",
       width: 140,
-      height: 40,
+      height: 48,
     },
     {
       name: "Solana",
       darkUrl: "/logos/solanaLogo white.png",
       lightUrl: "/logos/solanaLogo black.png",
       width: 140,
-      height: 40,
+      height: 48,
     },
     {
       name: "Starknet",
       darkUrl: "/logos/SN-Stacked-Flat white.png",
       lightUrl: "/logos/SN-Stacked-Flat colour.png",
       width: 100,
-      height: 40,
+      height: 48,
     },
     {
       name: "Stellar",
       darkUrl: "/logos/Stellar Logo Final white.png",
       lightUrl: "/logos/Stellar Logo Final black.png",
       width: 120,
-      height: 40,
+      height: 48,
     },
   ]
 
@@ -162,23 +162,28 @@ export function Hero() {
               logosInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <p className="text-sm text-muted-foreground">Empresas que escalaram conosco</p>
+            <p className="text-sm text-zinc-600 dark:text-zinc-400">Empresas que escalaram conosco</p>
 
-            <div className="relative overflow-hidden">
-              <div className="flex animate-infinite-scroll">
+            <div className="relative overflow-hidden py-6">
+              {/* Gradient overlays for fade effect */}
+              <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              
+              <div className="flex animate-infinite-scroll items-center gap-4">
                 {/* First set of logos */}
                 {companyLogos.map((logo, index) => (
                   <div
                     key={`${logo.name}-1-${index}`}
-                    className="flex-shrink-0 mx-8 md:mx-12 lg:mx-16 h-10 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                    style={{ width: logo.width }}
+                    className="flex-shrink-0 px-6 md:px-8 lg:px-10 h-20 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    style={{ minWidth: logo.width }}
                   >
                     <Image
                       src={isLightMode ? logo.lightUrl : logo.darkUrl}
                       alt={`${logo.name} logo`}
                       width={logo.width}
                       height={logo.height}
-                      className="object-contain"
+                      className="object-contain max-h-16 w-auto"
+                      priority={index < 5}
                     />
                   </div>
                 ))}
@@ -186,15 +191,15 @@ export function Hero() {
                 {companyLogos.map((logo, index) => (
                   <div
                     key={`${logo.name}-2-${index}`}
-                    className="flex-shrink-0 mx-8 md:mx-12 lg:mx-16 h-10 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                    style={{ width: logo.width }}
+                    className="flex-shrink-0 px-6 md:px-8 lg:px-10 h-20 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    style={{ minWidth: logo.width }}
                   >
                     <Image
                       src={isLightMode ? logo.lightUrl : logo.darkUrl}
                       alt={`${logo.name} logo`}
                       width={logo.width}
                       height={logo.height}
-                      className="object-contain"
+                      className="object-contain max-h-16 w-auto"
                     />
                   </div>
                 ))}
