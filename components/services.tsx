@@ -73,7 +73,8 @@ export function Services() {
           })}
         </div>
 
-        <div className="mt-16 grid grid-cols-3 md:grid-cols-6 gap-6">
+        {/* Icons Grid - Hidden on mobile */}
+        <div className="mt-16 hidden md:grid md:grid-cols-6 gap-6">
           {[Database, Cpu, Network, FileSearch, Code, Users].map((Icon, i) => (
             <div
               key={i}
