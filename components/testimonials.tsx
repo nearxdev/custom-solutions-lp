@@ -3,6 +3,7 @@
 import { useInView } from "@/hooks/use-in-view"
 import { Quote } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
 
 const testimonials = [
   {
@@ -57,6 +58,19 @@ const testimonials = [
 
 export function Testimonials() {
   const { ref, isInView } = useInView()
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index)
+  }
 
   return (
     <section ref={ref} className="py-12 md:py-20 px-4 relative overflow-hidden">
@@ -78,8 +92,92 @@ export function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Mobile Carousel */}
+        <div className="md:hidden relative">
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="w-full flex-shrink-0 px-2">
+                  <div className="bg-zinc-50/95 dark:bg-zinc-900/60 backdrop-blur-sm rounded-lg p-6 flex flex-col border border-zinc-200/50 dark:border-zinc-800/50 min-h-[400px]">
+                    {/* Quote Text - sem ícone no mobile */}
+                    <p className="text-zinc-600 dark:text-zinc-400 mb-6 flex-grow text-pretty leading-relaxed">
+                      "{testimonial.quote}"
+                    </p>
+
+                    <div className="border-t border-border/40 pt-4 flex items-center gap-4">
+                      <Image
+                        src={testimonial.image || "/placeholder.svg"}
+                        alt={testimonial.author}
+                        width={56}
+                        height={56}
+                        className="rounded-full border-2 border-primary/40"
+                      />
+                      <div>
+                        <p className="font-semibold text-foreground">{testimonial.author}</p>
+                        <p className="text-sm text-primary/80">{testimonial.role}</p>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-500">{testimonial.company}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 bg-background/80 backdrop-blur-sm border border-zinc-200 dark:border-zinc-800 rounded-full p-2 hover:bg-primary/10 transition-colors"
+            aria-label="Anterior"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-background/80 backdrop-blur-sm border border-zinc-200 dark:border-zinc-800 rounded-full p-2 hover:bg-primary/10 transition-colors"
+            aria-label="Próximo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center gap-2 mt-6">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? "bg-primary w-8" : "bg-zinc-300 dark:bg-zinc-700"
+                }`}
+                aria-label={`Ir para depoimento ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -89,7 +187,7 @@ export function Testimonials() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="h-full bg-zinc-50/95 dark:bg-zinc-900/60 backdrop-blur-sm rounded-lg p-6 flex flex-col border border-zinc-200/50 dark:border-zinc-800/50">
-                {/* Quote Icon */}
+                {/* Quote Icon - apenas desktop */}
                 <Quote className="w-8 h-8 text-primary/60 mb-4" />
 
                 {/* Quote Text */}

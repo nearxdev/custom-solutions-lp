@@ -25,70 +25,70 @@ export function Hero() {
     {
       name: "OP Core",
       darkUrl: "/logos/OP-Core_Wdmk_white-RGB_v01.png",
-      lightUrl: "/logos/OP-Core_Symb_1C-Red-RGB_v01.png",
+      lightUrl: "/logos/OP-Core_Symb_1C-Red-RGB_v01.png", // Vermelho (colorido)
       width: 120,
       height: 48,
     },
     {
       name: "Arbitrum",
       darkUrl: "/logos/0923_Arbitrum_Logos_AllWhite_horizontal_RGB.png",
-      lightUrl: "/logos/1223_Arbitrum_Logos_Primary_horizontal_RGB.png",
+      lightUrl: "/logos/1223_Arbitrum_Logos_Primary_horizontal_RGB.png", // Azul (colorido)
       width: 140,
       height: 48,
     },
     {
       name: "Bradesco",
       darkUrl: "/logos/Bradesco_H_White_RGB.png",
-      lightUrl: "/logos/Bradesco_H_Red_RGB.png",
+      lightUrl: "/logos/Bradesco_H_Red_RGB.png", // Vermelho (colorido)
       width: 140,
       height: 48,
     },
     {
       name: "Animoca Brands",
       darkUrl: "/logos/Animca Brands white.png",
-      lightUrl: "/logos/Animca Brands RGB.png",
+      lightUrl: "/logos/Animca Brands RGB.png", // Colorido (azul/multicolor)
       width: 140,
       height: 48,
     },
     {
       name: "OpenAI",
       darkUrl: "/logos/1681142235openai-logo-png white.png",
-      lightUrl: "/logos/1681142235openai-logo-png.png",
+      lightUrl: "/logos/1681142235openai-logo-png.png", // Preto (sem cor disponível)
       width: 120,
       height: 48,
     },
     {
       name: "Polygon",
       darkUrl: "/logos/Polygon_Primary_Light.png",
-      lightUrl: "/logos/Polygon_Primary_Dark.png",
+      lightUrl: "/logos/Polygon_Primary_Light.png", // Roxo claro (mais colorido)
       width: 140,
       height: 48,
     },
     {
       name: "Internet Computer",
       darkUrl: "/logos/IC_logo_horizontal_white.png",
-      lightUrl: "/logos/IC_logo_horizontal_black.png",
+      lightUrl: "/logos/IC_logo_horizontal_black.png", // Preto (sem cor disponível)
       width: 140,
       height: 48,
     },
     {
       name: "Solana",
       darkUrl: "/logos/solanaLogo white.png",
-      lightUrl: "/logos/solanaLogo black.png",
+      lightUrl: "/logos/solanaLogo black.png", // Preto (sem cor disponível)
       width: 140,
       height: 48,
     },
     {
       name: "Starknet",
       darkUrl: "/logos/SN-Stacked-Flat white.png",
-      lightUrl: "/logos/SN-Stacked-Flat colour.png",
+      lightUrl: "/logos/SN-Stacked-Flat colour.png", // Colorido (laranja/multicolor)
       width: 100,
       height: 48,
     },
     {
       name: "Stellar",
       darkUrl: "/logos/Stellar Logo Final white.png",
-      lightUrl: "/logos/Stellar Logo Final black.png",
+      lightUrl: "/logos/Stellar Logo Final black.png", // Preto (sem cor disponível)
       width: 120,
       height: 48,
     },
