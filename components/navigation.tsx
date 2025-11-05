@@ -2,44 +2,52 @@
 
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { Menu, X, MessageCircle } from "lucide-react"
+import { useState } from "react"
 
 export function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const whatsappUrl =
     "https://wa.me/5521999871904?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20de%20IA"
+
+  const closeMenu = () => setIsMenuOpen(false)
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg border border-primary/30 bg-primary/10 flex items-center justify-center">
-              <div className="h-4 w-4 bg-primary rounded-sm" />
+            <div className="h-7 w-7 md:h-8 md:w-8 rounded-lg border border-primary/30 bg-primary/10 flex items-center justify-center">
+              <div className="h-3.5 w-3.5 md:h-4 md:w-4 bg-primary rounded-sm" />
             </div>
-            <span className="text-xl font-bold">AI CONSULTING</span>
+            <span className="text-base sm:text-lg md:text-xl font-bold">AI CONSULTING</span>
           </div>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#servicos"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground transition-colors"
             >
               Serviços
             </a>
             <a
               href="#processo"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground transition-colors"
             >
               Processo
             </a>
             <a
               href="#beneficios"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground transition-colors"
             >
               Benefícios
             </a>
           </div>
 
-          <div className="flex items-center gap-3">
+          {/* Right Side - Desktop */}
+          <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <Button
               asChild
@@ -51,8 +59,59 @@ export function Navigation() {
               </a>
             </Button>
           </div>
+
+          {/* Right Side - Mobile */}
+          <div className="flex md:hidden items-center gap-2">
+            <ThemeToggle />
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent p-2"
+            >
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <MessageCircle className="h-5 w-5" />
+              </a>
+            </Button>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-foreground hover:bg-primary/10 rounded-lg transition-colors"
+              aria-label="Menu"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden border-t border-border/40 bg-background/95 backdrop-blur-xl">
+          <div className="container mx-auto px-4 py-4 space-y-3">
+            <a
+              href="#servicos"
+              onClick={closeMenu}
+              className="block py-2 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground hover:bg-primary/10 rounded-lg transition-colors"
+            >
+              Serviços
+            </a>
+            <a
+              href="#processo"
+              onClick={closeMenu}
+              className="block py-2 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground hover:bg-primary/10 rounded-lg transition-colors"
+            >
+              Processo
+            </a>
+            <a
+              href="#beneficios"
+              onClick={closeMenu}
+              className="block py-2 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground hover:bg-primary/10 rounded-lg transition-colors"
+            >
+              Benefícios
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
