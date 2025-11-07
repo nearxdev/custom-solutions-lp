@@ -2,11 +2,23 @@
 
 import { MessageCircle, Mail, MapPin } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
+import { useTheme } from "next-themes"
+import { useState, useEffect } from "react"
+import Image from "next/image"
 
 export function Footer() {
   const whatsappUrl = "https://wa.me/5521999871904"
+  const [mounted, setMounted] = useState(false)
+  const { theme, resolvedTheme } = useTheme()
 
   const { ref: footerRef, isInView: footerInView } = useInView({ threshold: 0.2 })
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const currentTheme = mounted ? (resolvedTheme || theme) : "dark"
+  const logoSrc = currentTheme === "light" ? "/blacklogo.png" : "/whitelogo.png"
 
   return (
     <footer className="border-t border-border/40 bg-muted/30">
@@ -17,9 +29,14 @@ export function Footer() {
               footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent" />
-              <span className="text-xl font-bold">AI Consulting</span>
+            <div className="flex items-center gap-3">
+              <Image
+                src={logoSrc}
+                alt="AI Consulting Logo"
+                width={160}
+                height={45}
+                className="h-8 w-auto"
+              />
             </div>
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
               Transformando negócios com inteligência artificial e tecnologia de ponta.
