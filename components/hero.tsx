@@ -182,15 +182,15 @@ export function Hero() {
 
             <div className="relative overflow-hidden py-6">
               {/* Gradient overlays for fade effect */}
-              <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-              <div className="absolute right-0 top-0 bottom-0 w-24 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
               
-              <div className="flex animate-infinite-scroll items-center gap-4">
+              <div className="flex animate-infinite-scroll items-center gap-2 md:gap-4" style={{ willChange: 'transform' }}>
                 {/* First set of logos */}
                 {companyLogos.map((logo, index) => (
                   <div
                     key={`${logo.name}-1-${index}`}
-                    className="flex-shrink-0 px-6 md:px-8 lg:px-10 h-20 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    className="flex-shrink-0 px-4 md:px-8 lg:px-10 h-16 md:h-20 flex items-center justify-center opacity-70 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 md:transition-all md:duration-300"
                     style={{ minWidth: logo.width }}
                   >
                     <Image
@@ -198,8 +198,9 @@ export function Hero() {
                       alt={`${logo.name} logo`}
                       width={logo.width}
                       height={logo.height}
-                      className="object-contain max-h-16 w-auto"
-                      priority={index < 5}
+                      className="object-contain max-h-12 md:max-h-16 w-auto"
+                      priority={index < 3}
+                      loading={index >= 3 ? "lazy" : undefined}
                     />
                   </div>
                 ))}
@@ -207,7 +208,7 @@ export function Hero() {
                 {companyLogos.map((logo, index) => (
                   <div
                     key={`${logo.name}-2-${index}`}
-                    className="flex-shrink-0 px-6 md:px-8 lg:px-10 h-20 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    className="flex-shrink-0 px-4 md:px-8 lg:px-10 h-16 md:h-20 flex items-center justify-center opacity-70 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 md:transition-all md:duration-300"
                     style={{ minWidth: logo.width }}
                   >
                     <Image
@@ -215,7 +216,8 @@ export function Hero() {
                       alt={`${logo.name} logo`}
                       width={logo.width}
                       height={logo.height}
-                      className="object-contain max-h-16 w-auto"
+                      className="object-contain max-h-12 md:max-h-16 w-auto"
+                      loading="lazy"
                     />
                   </div>
                 ))}

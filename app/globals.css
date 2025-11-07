@@ -130,21 +130,27 @@
     text-wrap: balance;
   }
 
-  /* Added infinite scroll animation for logo carousel */
+  /* Added infinite scroll animation for logo carousel - optimized for mobile */
   @keyframes infinite-scroll {
     from {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
   }
 
   .animate-infinite-scroll {
     animation: infinite-scroll 25s linear infinite;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
-  .animate-infinite-scroll:hover {
-    animation-play-state: paused;
+  @media (hover: hover) and (pointer: fine) {
+    .animate-infinite-scroll:hover {
+      animation-play-state: paused;
+    }
   }
 }
