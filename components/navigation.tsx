@@ -3,25 +3,40 @@
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Menu, X, MessageCircle } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useTheme } from "next-themes"
+import Image from "next/image"
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const { theme, resolvedTheme } = useTheme()
   const whatsappUrl =
     "https://wa.me/5521999871904?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consultoria%20de%20IA"
 
   const closeMenu = () => setIsMenuOpen(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const currentTheme = mounted ? (resolvedTheme || theme) : "dark"
+  const logoSrc = currentTheme === "light" ? "/blacklogo.png" : "/whitelogo.png"
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="h-7 w-7 md:h-8 md:w-8 rounded-lg border border-primary/30 bg-primary/10 flex items-center justify-center">
-              <div className="h-3.5 w-3.5 md:h-4 md:w-4 bg-primary rounded-sm" />
-            </div>
-            <span className="text-base sm:text-lg md:text-xl font-bold">AI CONSULTING</span>
+          <div className="flex items-center gap-3">
+            <Image
+              src={logoSrc}
+              alt="AI Consulting Logo"
+              width={180}
+              height={50}
+              className="h-8 md:h-10 w-auto"
+              priority
+            />
           </div>
 
           {/* Desktop Navigation */}
