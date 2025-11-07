@@ -185,21 +185,21 @@ export function Hero() {
               <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
               <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
               
-              <div className="flex animate-infinite-scroll items-center gap-6 md:gap-8" style={{ willChange: 'transform' }}>
+              <div className="flex animate-infinite-scroll items-center gap-4 md:gap-8" style={{ willChange: 'transform' }}>
                 {/* Multiple sets of logos for seamless infinite loop */}
-                {[1, 2, 3].map((setNumber) => (
+                {[1, 2, 3, 4].map((setNumber) => (
                   companyLogos.map((logo, index) => (
                     <div
                       key={`${logo.name}-${setNumber}-${index}`}
-                      className="flex-shrink-0 px-3 md:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-center opacity-70 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 md:transition-all md:duration-300"
-                      style={{ minWidth: `${logo.width * 0.8}px` }}
+                      className="flex-shrink-0 px-2 md:px-6 lg:px-8 h-14 md:h-20 flex items-center justify-center opacity-80 md:grayscale md:opacity-60 md:hover:grayscale-0 md:hover:opacity-100 md:transition-all md:duration-300"
+                      style={{ minWidth: `${Math.max(logo.width * 0.7, 80)}px` }}
                     >
                       <Image
                         src={isLightMode ? logo.lightUrl : logo.darkUrl}
                         alt={`${logo.name} logo`}
                         width={logo.width}
                         height={logo.height}
-                        className="object-contain max-h-10 md:max-h-14 w-auto"
+                        className="object-contain max-h-9 md:max-h-14 w-auto"
                         priority={setNumber === 1 && index < 2}
                         loading={setNumber > 1 || index >= 2 ? "lazy" : undefined}
                       />

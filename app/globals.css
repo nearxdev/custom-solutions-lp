@@ -136,7 +136,7 @@
       transform: translate3d(0, 0, 0);
     }
     to {
-      transform: translate3d(-33.333%, 0, 0);
+      transform: translate3d(-25%, 0, 0);
     }
   }
 
@@ -150,7 +150,7 @@
 
   @media (max-width: 768px) {
     .animate-infinite-scroll {
-      animation: infinite-scroll 18s linear infinite;
+      animation: infinite-scroll 10s linear infinite;
     }
   }
 
