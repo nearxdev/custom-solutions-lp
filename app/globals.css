@@ -132,16 +132,16 @@
 
   /* Added infinite scroll animation for logo carousel - optimized for mobile */
   @keyframes infinite-scroll {
-    from {
+    0% {
       transform: translate3d(0, 0, 0);
     }
-    to {
-      transform: translate3d(-25%, 0, 0);
+    100% {
+      transform: translate3d(-16.666%, 0, 0);
     }
   }
 
   .animate-infinite-scroll {
-    animation: infinite-scroll 20s linear infinite;
+    animation: infinite-scroll 25s linear infinite;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
@@ -150,7 +150,7 @@
 
   @media (max-width: 768px) {
     .animate-infinite-scroll {
-      animation: infinite-scroll 10s linear infinite;
+      animation: infinite-scroll 12s linear infinite;
     }
   }
 
