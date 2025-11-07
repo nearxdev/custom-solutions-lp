@@ -120,7 +120,7 @@ export function Hero() {
                 <div className="text-sm font-medium text-primary tracking-wider uppercase">Nearx Solutions</div>
                 <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
                 Desenvolvemos <br />
-                  <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#1A63FF] to-[#8E2DFF] bg-clip-text text-transparent">
                   soluções tecnológicas
                   </span>{" "}
                   em tempo recorde

@@ -30,7 +30,7 @@ export function CTA() {
               }`}
             >
               Pronto para{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#1A63FF] to-[#8E2DFF] bg-clip-text text-transparent">
                 transformar seu negócio
               </span>{" "}
               com tecnologias emergentes?
