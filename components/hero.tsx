@@ -117,13 +117,13 @@ export function Hero() {
                   titleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                <div className="text-sm font-medium text-primary tracking-wider uppercase">AI Consulting</div>
+                <div className="text-sm font-medium text-primary tracking-wider uppercase">Nearx Solutions</div>
                 <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-                  Parceiro estratégico em{" "}
+                Desenvolvemos <br />
                   <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                    tecnologia
+                  soluções tecnológicas
                   </span>{" "}
-                  para sua empresa
+                  em tempo recorde
                 </h1>
               </div>
 
@@ -133,7 +133,7 @@ export function Hero() {
                   descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Seu time tech plug-and-play. Construído para entregar desde o primeiro dia e escalar com sua estratégia.
+                Seu produto, construído com as tecnologias mais modernas e a expertise de quem entende de inovação.
               </p>
 
               <div
@@ -163,7 +163,7 @@ export function Hero() {
             }`}
           >
             <p className="text-base md:text-lg font-semibold tracking-wide text-zinc-700 dark:text-zinc-300 uppercase">
-              Empresas que escalaram conosco
+            Empresas parceiras
             </p>
 
             <div className="relative overflow-hidden py-6">

@@ -11,24 +11,24 @@ export function Process() {
     {
       number: "01",
       title: "Diagnóstico Inicial",
-      description: "Reunião para entender seu negócio, desafios e objetivos. Análise preliminar dos processos atuais.",
+      description: "Reunião conduzida por especialistas e doutores em IA, Blockchain e IoT para entender seu negócio e gerar insights práticos desde o primeiro encontro.",
     },
     {
       number: "02",
       title: "Análise Profunda",
       description:
-        "Mapeamento completo de todos os processos, identificação de gargalos e oportunidades de otimização com IA.",
+        "Mapeamento completo dos processos para identificar gargalos e oportunidades reais de otimização e automação.",
     },
     {
       number: "03",
       title: "Relatório Estratégico",
-      description: "Entrega de relatório detalhado com recomendações, ROI estimado e roadmap de implementação.",
+      description: "Entrega de um plano claro com recomendações, ROI estimado e roadmap de implementação para resultados rápidos e mensuráveis.",
     },
     {
       number: "04",
       title: "Implementação",
       description:
-        "Desenvolvimento e implantação das soluções de IA com acompanhamento contínuo e ajustes em tempo real.",
+        "Implantação feita por um time sênior, com acompanhamento contínuo e ajustes em tempo real para garantir impacto imediato.",
     },
   ]
 
@@ -44,7 +44,7 @@ export function Process() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance mb-4">
             Como{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              Funciona
+              Funciona?
             </span>
           </h2>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">

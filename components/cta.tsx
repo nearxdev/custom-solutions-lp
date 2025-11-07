@@ -31,17 +31,17 @@ export function CTA() {
             >
               Pronto para{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                transformar
+                transformar seu negócio
               </span>{" "}
-              seu negócio com IA?
+              com tecnologias emergentes?
+
             </h2>
             <p
               className={`text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-200 ${
                 ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Agende uma análise gratuita e descubra como podemos aumentar seu faturamento e reduzir custos com
-              inteligência artificial.
+              Fale agora com nosso time e dê o primeiro passo para levar seu negócio ao máximo potencial com o uso de tecnologias emergentes em tempo recorde
             </p>
 
             <div

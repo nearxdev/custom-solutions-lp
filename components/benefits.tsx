@@ -12,22 +12,22 @@ export function Benefits() {
     {
       icon: TrendingUp,
       title: "Aumento de Faturamento",
-      description: "Identifique oportunidades de crescimento e otimize processos de vendas com IA",
+      description: "Geramos crescimento real ao integrar tecnologia e estratégia, potencializando resultados e novas oportunidades de negócio.",
     },
     {
       icon: TrendingDown,
       title: "Redução de Custos",
-      description: "Automatize tarefas repetitivas e elimine desperdícios operacionais",
+      description: "Automatizamos processos e otimizamos recursos com IA e IoT, reduzindo desperdícios e aumentando eficiência operacional.",
     },
     {
       icon: Zap,
-      title: "Eficiência Operacional",
-      description: "Acelere processos e tome decisões baseadas em dados em tempo real",
+      title: "Novas Linhas de Receita",
+      description: "Transformamos inovação em novos modelos de negócio, criando produtos e serviços digitais baseados em Blockchain e dados inteligentes.",
     },
     {
       icon: Shield,
-      title: "Vantagem Competitiva",
-      description: "Fique à frente da concorrência com tecnologia de ponta",
+      title: "Segurança e Escala",
+      description: "Garantimos confiabilidade e escalabilidade com infraestrutura segura, transparente e preparada para o futuro.",
     },
   ]
 
@@ -41,15 +41,14 @@ export function Benefits() {
           }`}
         >
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-balance mb-4">
-            Engenharia do{" "}
+          Engenharia {" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              futuro
+              inteligente
             </span>{" "}
-            de soluções digitais
+            para um mundo digital
           </h2>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Fundimos IA, blockchain e dados para criar produtos escaláveis e inteligentes que levam indústrias ao
-            próximo nível.
+          Nossa especialidade é transformar Blockchain, IA e IoT em soluções tangíveis e de impacto.
           </p>
         </div>
 

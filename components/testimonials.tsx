@@ -88,7 +88,7 @@ export function Testimonials() {
             </span>
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 text-lg max-w-2xl mx-auto text-pretty">
-            Impacto real e mensurável no seu negócio desde o primeiro mês
+          O que nossos clientes dizem sobre nós
           </p>
         </div>
 
