@@ -92,6 +92,20 @@ export function Hero() {
       width: 120,
       height: 48,
     },
+    {
+      name: "Google Cloud",
+      darkUrl: "/logos/Google_Cloud_logo white.png",
+      lightUrl: "/logos/Google_Cloud_logo cor.png", // Colorido (multicolor)
+      width: 140,
+      height: 48,
+    },
+    {
+      name: "Bankei",
+      darkUrl: "/logos/logo bankei white.png",
+      lightUrl: "/logos/logo bankei cor.png", // Colorido
+      width: 120,
+      height: 48,
+    },
   ]
 
   const currentTheme = mounted ? (resolvedTheme || theme) : "dark"
