@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AI Consulting | Transforme seu Negócio com Inteligência Artificial",
+  title: "Desenvolvimento | Nearx",
   description:
     "Consultoria especializada em IA para aumentar faturamento e reduzir custos. Análise completa de processos, tech team as a service e desenvolvimento contínuo.",
   generator: "v0.app",

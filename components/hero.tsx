@@ -8,7 +8,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 export function Hero() {
-  const whatsappUrl = "https://wa.me/5521999871904?text=Olá!%20Quero%20transformar%20meu%20negócio%20com%20IA"
+  const whatsappUrl = "https://wa.me/5521999871904?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
   const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 

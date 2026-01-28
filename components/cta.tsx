@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { useInView } from "@/hooks/use-in-view"
 
 export function CTA() {
-  const whatsappUrl = "https://wa.me/5521999871904?text=Olá!%20Quero%20agendar%20uma%20análise%20gratuita"
+  const whatsappUrl = "https://wa.me/5521999871904?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
 
   const { ref: ctaRef, isInView: ctaInView } = useInView({ threshold: 0.3 })
 

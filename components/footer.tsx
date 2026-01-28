@@ -7,7 +7,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export function Footer() {
-  const whatsappUrl = "https://wa.me/5521997025044?text=Olá!%20Gostaria%20de%20desenvolver%20meu%20projeto%20com%20você%20"
+  const whatsappUrl = "https://wa.me/5521997025044?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
   const [mounted, setMounted] = useState(false)
   const { theme, resolvedTheme } = useTheme()
 
