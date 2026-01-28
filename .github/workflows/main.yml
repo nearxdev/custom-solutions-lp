@@ -1,0 +1,36 @@
+name: ci
+on:
+  push:
+    branches: ['main']
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: mr-smithers-excellent/docker-build-push@v6
+              name: Build & push Docker image
+              with:
+                image: custom-solution
+                tags: latest
+                registry: ghcr.io/nearxdev
+                dockerfile: Dockerfile
+                username: nearxdev
+                password: ${{ secrets.GH_TOKEN }}
+
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: executing remote ssh commands using password
+              uses: appleboy/ssh-action@v0.1.8
+              with:
+                host: ${{ secrets.HOST }}
+                username: ${{ secrets.USER }}
+                key: ${{ secrets.KEY }}
+                passphrase: ${{ secrets.PASSPHRASE }}
+                script: |
+                        cd /etc/nearx/custom-solution
+                        sudo docker compose pull custom-solution
+                        sudo docker compose up -d custom-solution
