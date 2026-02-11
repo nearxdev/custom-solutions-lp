@@ -132,12 +132,12 @@ export function Hero() {
                 }`}
               >
                 <div className="text-sm font-medium text-primary tracking-wider uppercase">Nearx Solutions</div>
-                <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-                Desenvolvemos <br />
+                <h1 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-5xl max-w-4xl line-clamp-3">
+                  Desenvolvemos{" "}
                   <span className="bg-gradient-to-r from-[#1A63FF] to-[#8E2DFF] bg-clip-text text-transparent">
-                  soluções tecnológicas
+                    soluções tecnológicas
                   </span>{" "}
-                  em tempo recorde
+                  com impacto real no seu negócio — em tempo recorde.
                 </h1>
               </div>
 
@@ -147,12 +147,19 @@ export function Hero() {
                   descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Seu produto, construído com as tecnologias mais modernas e a expertise de quem entende de inovação.
+                A Nearx atua como seu <strong>time estratégico de tecnologia</strong>, criando e implementando soluções sob demanda em <strong>IA, Blockchain e automação</strong>, com foco em <strong>crescimento, eficiência e novas receitas</strong>.
+              </p>
+              <p
+                className={`mx-auto max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-100 ${
+                  descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+              >
+                Não entregamos apenas software pronto. Entregamos <strong>vantagem competitiva real</strong>.
               </p>
 
               <div
                 ref={buttonsRef as any}
-                className={`flex justify-center transition-all duration-700 delay-200 ${
+                className={`flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 transition-all duration-700 delay-200 ${
                   buttonsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
@@ -163,8 +170,16 @@ export function Hero() {
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
                 >
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                    Entrar em contato
+                    Falar com um especialista
                   </a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="secondary"
+                  className="bg-muted text-muted-foreground hover:bg-muted/80 transition-all duration-300"
+                >
+                  <a href="#processo">Ver como funciona</a>
                 </Button>
               </div>
             </div>
@@ -176,8 +191,8 @@ export function Hero() {
               logosInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <p className="text-base md:text-lg font-semibold tracking-wide text-zinc-700 dark:text-zinc-300 uppercase">
-            Empresas parceiras
+            <p className="text-base md:text-lg font-semibold tracking-wide text-zinc-700 dark:text-zinc-300 max-w-2xl mx-auto">
+              Empresas e parceiros que confiam na Nearx para executar tecnologia crítica.
             </p>
 
             <div className="relative overflow-hidden py-6">

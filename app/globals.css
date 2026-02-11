@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Updated light theme colors for better contrast and readability */
 :root {
   --background: oklch(0.99 0 0);

@@ -1,6 +1,6 @@
 "use client"
 
-import { MessageCircle, Mail, MapPin } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from "react"
@@ -106,23 +106,12 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
               <li className="flex items-center gap-2">
-                <MessageCircle className="h-4 w-4 text-primary" />
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-foreground transition-colors"
-                >
-                  (21) 99987-1904
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>contato@aiconsulting.com</span>
+                <span>contato@nearx.com.br</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5" />
-                <span>Rio de Janeiro, RJ</span>
+                <span>São Paulo, SP</span>
               </li>
             </ul>
           </div>

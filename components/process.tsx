@@ -1,6 +1,5 @@
 "use client"
 
-import { CheckCircle2 } from "lucide-react"
 import { useInView } from "@/hooks/use-in-view"
 
 export function Process() {
@@ -10,30 +9,30 @@ export function Process() {
   const steps = [
     {
       number: "01",
-      title: "Diagnóstico Inicial",
-      description: "Reunião conduzida por especialistas e doutores em IA, Blockchain e IoT para entender seu negócio e gerar insights práticos desde o primeiro encontro.",
+      title: "Diagnóstico Estratégico",
+      description: "Reunião conduzida por especialistas em IA, Blockchain e automação para entender o negócio e gerar insights práticos desde o primeiro contato.",
     },
     {
       number: "02",
       title: "Análise Profunda",
       description:
-        "Mapeamento completo dos processos para identificar gargalos e oportunidades reais de otimização e automação.",
+        "Mapeamento técnico e operacional completo para identificar gargalos, riscos e oportunidades reais.",
     },
     {
       number: "03",
-      title: "Relatório Estratégico",
-      description: "Entrega de um plano claro com recomendações, ROI estimado e roadmap de implementação para resultados rápidos e mensuráveis.",
+      title: "Plano Estratégico + ROI",
+      description: "Entrega de um relatório claro com roadmap técnico, estimativa de ROI e prioridades de implementação.",
     },
     {
       number: "04",
-      title: "Implementação",
+      title: "Implementação e Escala",
       description:
-        "Implantação feita por um time sênior, com acompanhamento contínuo e ajustes em tempo real para garantir impacto imediato.",
+        "Execução por um time sênior com acompanhamento contínuo, ajustes rápidos e foco em impacto imediato.",
     },
   ]
 
   return (
-    <section id="processo" className="py-12 md:py-20 bg-muted/30">
+    <section id="processo" className="scroll-mt-20 py-12 md:py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={titleRef as any}
@@ -48,7 +47,7 @@ export function Process() {
             </span>
           </h2>
           <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Processo simples e transparente do diagnóstico à implementação
+            Um processo claro, estratégico e orientado a resultado.
           </p>
         </div>
 
@@ -57,7 +56,7 @@ export function Process() {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`group relative flex gap-6 rounded-xl bg-zinc-50/95 dark:bg-zinc-900/60 backdrop-blur-sm p-6 border border-zinc-200/50 dark:border-zinc-800/50 transition-all duration-700 ${
+                className={`relative flex gap-6 rounded-xl bg-zinc-50/95 dark:bg-zinc-900/60 backdrop-blur-sm p-6 border border-zinc-200/50 dark:border-zinc-800/50 transition-all duration-700 ${
                   stepsInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
@@ -69,9 +68,8 @@ export function Process() {
                 </div>
 
                 <div className="flex-1 pt-1">
-                  <h3 className="mb-2 text-xl font-bold flex items-center gap-2">
+                  <h3 className="mb-2 text-xl font-bold">
                     {step.title}
-                    <CheckCircle2 className="h-5 w-5 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
                   </h3>
                   <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">{step.description}</p>
                 </div>

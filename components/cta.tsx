@@ -29,19 +29,18 @@ export function CTA() {
                 ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Pronto para{" "}
+              Pronto para aplicar tecnologia com{" "}
               <span className="bg-gradient-to-r from-[#1A63FF] to-[#8E2DFF] bg-clip-text text-transparent">
-                transformar seu negócio
+                impacto real
               </span>{" "}
-              com tecnologias emergentes?
-
+              no seu negócio?
             </h2>
             <p
-              className={`text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-200 ${
+              className={`text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl mx-auto transition-all duration-700 delay-200 ${
                 ctaInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Fale agora com nosso time e dê o primeiro passo para levar seu negócio ao máximo potencial com o uso de tecnologias emergentes em tempo recorde
+              Fale agora com nosso time e receba um diagnóstico estratégico para entender onde a tecnologia pode gerar mais resultado para sua empresa — com clareza, velocidade e execução sênior.
             </p>
 
             <div
@@ -53,10 +52,10 @@ export function CTA() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 bg-transparent text-base sm:text-lg px-8 py-6 h-auto font-semibold"
               >
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  Entrar em contato
+                  Falar com um especialista
                 </a>
               </Button>
             </div>

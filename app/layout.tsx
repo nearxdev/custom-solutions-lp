@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "Consultoria especializada em IA para aumentar faturamento e reduzir custos. Análise completa de processos, tech team as a service e desenvolvimento contínuo.",
   generator: "v0.app",
+  icons: {
+    icon: "/iconnearx.svg",
+  },
 }
 
 export default function RootLayout({

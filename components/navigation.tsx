@@ -43,19 +43,19 @@ export function Navigation() {
           <div className="hidden md:flex items-center gap-8">
             <a
               href="#servicos"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground transition-colors"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-200"
             >
               Serviços
             </a>
             <a
               href="#processo"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground transition-colors"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-200"
             >
               Processo
             </a>
             <a
               href="#beneficios"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground transition-colors"
+              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-200"
             >
               Benefícios
             </a>
@@ -106,21 +106,21 @@ export function Navigation() {
             <a
               href="#servicos"
               onClick={closeMenu}
-              className="block py-2 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground hover:bg-primary/10 rounded-lg transition-colors"
+              className="block py-2.5 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-200"
             >
               Serviços
             </a>
             <a
               href="#processo"
               onClick={closeMenu}
-              className="block py-2 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground hover:bg-primary/10 rounded-lg transition-colors"
+              className="block py-2.5 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-200"
             >
               Processo
             </a>
             <a
               href="#beneficios"
               onClick={closeMenu}
-              className="block py-2 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-foreground hover:bg-primary/10 rounded-lg transition-colors"
+              className="block py-2.5 px-4 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-primary transition-colors duration-200"
             >
               Benefícios
             </a>
