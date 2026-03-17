@@ -12,7 +12,7 @@ export function Navigation() {
   const [mounted, setMounted] = useState(false)
   const { theme, resolvedTheme } = useTheme()
   const whatsappUrl =
-    "https://wa.me/5521964013298?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
+    "https://wa.me/5511916927140?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
 
   const closeMenu = () => setIsMenuOpen(false)
 

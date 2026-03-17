@@ -7,7 +7,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export function Footer() {
-  const whatsappUrl = "https://wa.me/5521997025044?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
+  const whatsappUrl = "https://wa.me/5511916927140?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
   const [mounted, setMounted] = useState(false)
   const { theme, resolvedTheme } = useTheme()
 
@@ -25,9 +25,8 @@ export function Footer() {
       <div ref={footerRef as any} className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div
-            className={`space-y-4 transition-all duration-700 ${
-              footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`space-y-4 transition-all duration-700 ${footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <div className="flex items-center gap-3">
               <Image
@@ -44,9 +43,8 @@ export function Footer() {
           </div>
 
           <div
-            className={`transition-all duration-700 delay-100 ${
-              footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`transition-all duration-700 delay-100 ${footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <h3 className="font-semibold mb-4">Serviços</h3>
             <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
@@ -69,9 +67,8 @@ export function Footer() {
           </div>
 
           <div
-            className={`transition-all duration-700 delay-200 ${
-              footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`transition-all duration-700 delay-200 ${footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <h3 className="font-semibold mb-4">Empresa</h3>
             <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
@@ -99,9 +96,8 @@ export function Footer() {
           </div>
 
           <div
-            className={`transition-all duration-700 delay-300 ${
-              footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`transition-all duration-700 delay-300 ${footerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <h3 className="font-semibold mb-4">Contato</h3>
             <ul className="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
@@ -118,9 +114,8 @@ export function Footer() {
         </div>
 
         <div
-          className={`mt-12 pt-8 border-t border-border/40 text-center text-sm text-zinc-600 dark:text-zinc-400 transition-all duration-700 delay-400 ${
-            footerInView ? "opacity-100" : "opacity-0"
-          }`}
+          className={`mt-12 pt-8 border-t border-border/40 text-center text-sm text-zinc-600 dark:text-zinc-400 transition-all duration-700 delay-400 ${footerInView ? "opacity-100" : "opacity-0"
+            }`}
         >
           <p>&copy; {new Date().getFullYear()} AI Consulting. Todos os direitos reservados.</p>
         </div>
