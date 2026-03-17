@@ -8,7 +8,7 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 export function Hero() {
-  const whatsappUrl = "https://wa.me/5521999871904?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
+  const whatsappUrl = "https://wa.me/5511916927140?text=Olá%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informacões..."
   const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -127,9 +127,8 @@ export function Hero() {
             <div className="text-center space-y-8">
               <div
                 ref={titleRef as any}
-                className={`space-y-6 transition-all duration-700 ${
-                  titleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`space-y-6 transition-all duration-700 ${titleInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
               >
                 <div className="text-sm font-medium text-primary tracking-wider uppercase">Nearx Solutions</div>
                 <h1 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-5xl max-w-4xl line-clamp-3">
@@ -143,25 +142,22 @@ export function Hero() {
 
               <p
                 ref={descRef as any}
-                className={`mx-auto max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-100 ${
-                  descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`mx-auto max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-100 ${descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
               >
                 A Nearx atua como seu <strong>time estratégico de tecnologia</strong>, criando e implementando soluções sob demanda em <strong>IA, Blockchain e automação</strong>, com foco em <strong>crescimento, eficiência e novas receitas</strong>.
               </p>
               <p
-                className={`mx-auto max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-100 ${
-                  descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`mx-auto max-w-2xl text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed transition-all duration-700 delay-100 ${descInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
               >
                 Não entregamos apenas software pronto. Entregamos <strong>vantagem competitiva real</strong>.
               </p>
 
               <div
                 ref={buttonsRef as any}
-                className={`flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 transition-all duration-700 delay-200 ${
-                  buttonsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 transition-all duration-700 delay-200 ${buttonsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
               >
                 <Button
                   asChild
@@ -187,9 +183,8 @@ export function Hero() {
 
           <div
             ref={logosRef as any}
-            className={`mt-20 text-center space-y-8 transition-all duration-700 ${
-              logosInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`mt-20 text-center space-y-8 transition-all duration-700 ${logosInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <p className="text-base md:text-lg font-semibold tracking-wide text-zinc-700 dark:text-zinc-300 max-w-2xl mx-auto">
               Empresas e parceiros que confiam na Nearx para executar tecnologia crítica.
@@ -199,7 +194,7 @@ export function Hero() {
               {/* Gradient overlays for fade effect */}
               <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
               <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-              
+
               <div className="flex animate-infinite-scroll items-center" style={{ willChange: 'transform' }}>
                 {/* Multiple sets of logos for seamless infinite loop */}
                 {Array.from({ length: 6 }).map((_, setNumber) => (
